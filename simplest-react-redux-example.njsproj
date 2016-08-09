@@ -22,13 +22,15 @@
     <Content Include=".eslintrc" />
     <Content Include=".gitignore" />
     <Content Include="client\components\App.jsx" />
+    <Content Include="client\containers\CounterContainer.jsx" />
     <Content Include="client\components\Counter.jsx" />
     <Content Include="client\index.jsx" />
     <Content Include="LICENSE" />
     <Content Include="package.json" />
     <Content Include="public\index.html" />
     <Content Include="README.md" />
-    <Compile Include="client\reducers\actions.js" />
+    <Compile Include="client\actions\ActionTypes.js" />
+    <Compile Include="client\actions\CounterActionCreators.js" />
     <Compile Include="client\reducers\counter.js" />
     <Compile Include="client\reducers\index.js" />
     <Compile Include="gulpfile.js" />
@@ -38,6 +40,8 @@
   <ItemGroup>
     <Folder Include="client\" />
     <Folder Include="client\components\" />
+    <Folder Include="client\actions\" />
+    <Folder Include="client\containers\" />
     <Folder Include="client\reducers\" />
     <Folder Include="public\" />
   </ItemGroup>

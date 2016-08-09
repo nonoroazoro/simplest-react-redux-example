@@ -1,31 +1,15 @@
 ﻿/**
- * App is a Container Component.
+ * App is a Presentational Component (Root Component).
  */
 
-import { connect } from "react-redux";
+import React from "react";
+import CounterContainer from "../containers/CounterContainer";
 
-import Counter from "./Counter";
-import actions from "../reducers/actions";
-
-// Map Redux state to component props.
-function mapStateToProps(p_state)
+export default function App()
 {
-    // Attention: must use the corresponding reducer name (here "counter") to access reducer
-    // cause we used combineReducers before.
-    return {
-        value: p_state.counter.value
-    };
+    return (
+        <div>
+            <CounterContainer />
+        </div>
+    );
 }
-
-// Map Redux actions to component props.
-function mapDispatchToProps(p_dispatch)
-{
-    return {
-        onIncrement: () => p_dispatch(actions.COUNTER_INCREMENT),
-        onDecrement: () => p_dispatch(actions.COUNTER_DECREMENT)
-    };
-}
-
-// Connected Component.
-const App = connect(mapStateToProps, mapDispatchToProps)(Counter);
-export default App;

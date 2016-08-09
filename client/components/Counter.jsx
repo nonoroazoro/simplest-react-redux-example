@@ -12,14 +12,6 @@ class Counter extends Component
         onDecrement: PropTypes.func.isRequired
     };
 
-    incrementIfOdd()
-    {
-        if (this.props.value % 2 !== 0)
-        {
-            this.props.onIncrement();
-        }
-    }
-
     incrementAsync()
     {
         setTimeout(this.props.onIncrement, 1000);
@@ -32,11 +24,13 @@ class Counter extends Component
             <p>
                 <span>{value}</span>
                 {" "}
-                <button onClick={onIncrement}>+</button>
+                <button onClick={() => onIncrement()}>+</button>
                 {" "}
-                <button onClick={onDecrement}>-</button>
+                <button onClick={() => onDecrement()}>-</button>
                 {" "}
-                <button onClick={this.incrementIfOdd.bind(this)}>Increment Of Odd</button>
+                <button onClick={() => onIncrement(2)}>+ 2</button>
+                {" "}
+                <button onClick={() => onDecrement(3)}>- 3</button>
                 {" "}
                 <button onClick={this.incrementAsync.bind(this)}>Increment Async</button>
             </p>
