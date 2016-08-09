@@ -8,7 +8,9 @@ export function increase(p_num = 1)
 {
     return {
         type: types.COUNTER_INCREASE,
-        payload: p_num
+        payload: {
+            num: p_num
+        }
     };
 }
 
@@ -16,6 +18,8 @@ export function decrease(p_num = 1)
 {
     return {
         type: types.COUNTER_DECREASE,
-        payload: p_num
+        payload: {
+            num: p_num
+        }
     };
 }
