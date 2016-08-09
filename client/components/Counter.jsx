@@ -27,9 +27,9 @@ class Counter extends Component
                 {" "}
                 <button onClick={() => actions.decrease()}>-</button>
                 {" "}
-                <button onClick={() => actions.increase(2)}>+ 2</button>
+                <button onClick={() => actions.increase(2)}>+2</button>
                 {" "}
-                <button onClick={() => actions.decrease(3)}>- 3</button>
+                <button onClick={() => actions.decrease(3)}>-3</button>
                 {" "}
                 <button onClick={this.incrementAsync.bind(this)}>Increment Async</button>
             </p>
