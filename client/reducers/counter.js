@@ -6,7 +6,6 @@ import * as types from "../actions/ActionTypes";
 
 export default function counter(p_state = { value: 0 }, p_action)
 {
-    console.log(p_action);
     switch (p_action.type)
     {
         case types.COUNTER_INCREMENT:
