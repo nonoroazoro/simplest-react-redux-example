@@ -8,10 +8,10 @@ export default function counter(p_state = { value: 0 }, p_action)
 {
     switch (p_action.type)
     {
-        case types.COUNTER_INCREMENT:
+        case types.COUNTER_INCREASE:
             return { value: p_state.value + p_action.payload };
 
-        case types.COUNTER_DECREMENT:
+        case types.COUNTER_DECREASE:
             return { value: p_state.value - p_action.payload };
 
         default:

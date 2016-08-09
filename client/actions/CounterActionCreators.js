@@ -4,18 +4,20 @@
 
 import * as types from "./ActionTypes";
 
-export function onIncrement(p_num = 1)
+export function increase(p_num = 1)
 {
+    console.log(p_num);
     return {
-        type: types.COUNTER_INCREMENT,
+        type: types.COUNTER_INCREASE,
         payload: p_num
     };
 }
 
-export function onDecrement(p_num = 1)
+export function decrease(p_num = 1)
 {
+    console.log(p_num);
     return {
-        type: types.COUNTER_DECREMENT,
+        type: types.COUNTER_DECREASE,
         payload: p_num
     };
 }
