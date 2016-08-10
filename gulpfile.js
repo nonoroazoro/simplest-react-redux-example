@@ -26,11 +26,11 @@ gulp.task("build", () =>
 gulp.task("dev", () =>
 {
     const port = "8080";
-    const ip = "http://localhost";
+    const address = "http://localhost";
     const devConfig = require("./webpack.config");
 
     // 1. Hot module replacement of webpack-dev-server.
-    devConfig.entry.index.unshift(`webpack-dev-server/client?${ip}:${port}`, "webpack/hot/dev-server");
+    devConfig.entry.index.unshift(`webpack-dev-server/client?${address}:${port}`, "webpack/hot/dev-server");
     devConfig.plugins.push(new webpack.HotModuleReplacementPlugin());
 
     // 2. Hot module replacement of react-hot-loader.
@@ -39,6 +39,7 @@ gulp.task("dev", () =>
     // 3. Config webpack-dev-server.
     new WebpackDevServer(webpack(devConfig), {
         hot: true, // For Hot module replacement.
+        compress: true, // gzip
         stats:
         {
             chunks: false,
@@ -52,7 +53,7 @@ gulp.task("dev", () =>
         {
             throw new gutil.PluginError("webpack-dev-server", err);
         }
-        gutil.log("[webpack-dev-server]", `${ip}:${port}`);
+        gutil.log("[webpack-dev-server]", `${address}:${port}`);
     });
 });
 
