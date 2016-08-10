@@ -15,7 +15,11 @@ gulp.task("build", () =>
         {
             throw new gutil.PluginError("webpack", err);
         }
-        gutil.log("[webpack]", stats.toString());
+        gutil.log("[webpack]", stats.toString(
+        {
+            chunks: false,
+            colors: true
+        }));
     });
 });
 
@@ -35,6 +39,11 @@ gulp.task("dev", () =>
     // 3. Config webpack-dev-server.
     new WebpackDevServer(webpack(devConfig), {
         hot: true, // For Hot module replacement.
+        stats:
+        {
+            chunks: false,
+            colors: true
+        },
         contentBase: "./public",
         publicPath: devConfig.output.publicPath
     }).listen(port, "localhost", (err) =>
