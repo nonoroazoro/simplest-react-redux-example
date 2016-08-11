@@ -9,12 +9,16 @@ class Counter extends Component
     static propTypes = {
         value: PropTypes.number.isRequired,
         actions: PropTypes.shape({
-            increase: React.PropTypes.func.isRequired,
-            decrease: React.PropTypes.func.isRequired
+            increase: PropTypes.func.isRequired,
+            decrease: PropTypes.func.isRequired
         })
     };
 
-    incrementAsync()
+    /**
+     * Method is not automatically bound to its component instance when using ES6 class syntax.
+     * We can manually bind this method with arrow function.
+     */
+    incrementAsync = () =>
     {
         setTimeout(this.props.actions.increase, 1000);
     }
@@ -34,7 +38,7 @@ class Counter extends Component
                 {" "}
                 <button onClick={() => actions.decrease(3)}>-3</button>
                 {" "}
-                <button onClick={this.incrementAsync.bind(this)}>Increment Async</button>
+                <button onClick={this.incrementAsync}>Increment Async</button>
             </p>
         );
     }
