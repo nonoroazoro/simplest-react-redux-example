@@ -8,7 +8,10 @@ class Counter extends Component
 {
     static propTypes = {
         value: PropTypes.number.isRequired,
-        actions: PropTypes.object.isRequired
+        actions: PropTypes.shape({
+            increase: React.PropTypes.func.isRequired,
+            decrease: React.PropTypes.func.isRequired
+        })
     };
 
     incrementAsync()
