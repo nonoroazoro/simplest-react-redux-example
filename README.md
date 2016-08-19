@@ -1,6 +1,18 @@
 # simplest-react-redux-example
 
-A very simple [Redux](https://github.com/rackt/redux) + [React](https://facebook.github.io/react/) + [ES6](https://babeljs.io/docs/learn-es2015/) ([ES7](http://babeljs.io/docs/plugins/preset-stage-1/)) + [ESLint](http://eslint.org/) + [Webpack](https://webpack.github.io/) + [gulp](http://gulpjs.com/) example for beginners (support React Hot Module Replacement).
+A very simple [Redux](https://github.com/rackt/redux) + [React](https://facebook.github.io/react/) example for beginners (support React Hot Module Replacement).
+
+
+## Features:
+
+- [React](https://facebook.github.io/react/)
+- [Redux](https://github.com/rackt/redux)
+- [ES6](https://babeljs.io/docs/learn-es2015/) ([ES7](http://babeljs.io/docs/plugins/preset-stage-1/))
+- [ESLint](http://eslint.org/)
+- [Webpack](https://webpack.github.io/)
+- [Webpack Hot Module Replacement](https://webpack.github.io/docs/hot-module-replacement.html) + [React Hot Loader](https://gaearon.github.io/react-hot-loader/)
+- [gulp](http://gulpjs.com/)
+
 
 ## Usage:
 
