@@ -33,6 +33,7 @@
     <Compile Include="client\actions\CounterActionCreators.js" />
     <Compile Include="client\reducers\counter.js" />
     <Compile Include="client\reducers\index.js" />
+    <Compile Include="client\utils\AsyncAPI.js" />
     <Compile Include="gulpfile.js" />
     <Compile Include="webpack.base.config.js" />
     <Compile Include="webpack.config.js" />
@@ -43,6 +44,7 @@
     <Folder Include="client\actions\" />
     <Folder Include="client\containers\" />
     <Folder Include="client\reducers\" />
+    <Folder Include="client\utils\" />
     <Folder Include="public\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.Common.targets" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
