@@ -5,11 +5,13 @@
 import React from "react";
 import CounterContainer from "../containers/CounterContainer";
 
-export default function App()
+const App = (p_props) =>
 {
     return (
         <div>
             <CounterContainer />
         </div>
     );
-}
+};
+
+export default App;
