@@ -1,6 +1,6 @@
 # simplest-react-redux-example
 
-A very simple [Redux](https://github.com/rackt/redux) + [React](https://facebook.github.io/react/) example for beginners (support React Hot Module Replacement).
+A very simple [Redux](https://github.com/rackt/redux) + [React](https://facebook.github.io/react/) example for beginners (support Hot Module Replacement).
 
 
 ## Features:
