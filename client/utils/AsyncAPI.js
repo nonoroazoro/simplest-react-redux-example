@@ -2,21 +2,22 @@
  * Just an example of async api.
  */
 
-export default class AsyncAPI
+/**
+ * Do some async job and return the result.
+ */
+function doSomeAsyncJob(p_num = 1)
 {
-    /**
-     * Do some async job and return the result.
-     * Here, the function must with the keyword static.
-     */
-    static doSomeAsyncJob(p_num = 1)
+    return new Promise((resolve, reject) =>
     {
-        return new Promise((resolve, reject) =>
-        {
-            setTimeout(resolve, 1000);
-        }).then(() =>
-        {
-            // Here's a fake result.
-            return p_num;
-        });
-    }
+        setTimeout(resolve, 1000);
+    }).then(() =>
+    {
+        // Here's a fake result.
+        return p_num;
+    });
 }
+
+// Using ES6 export table.
+export default {
+    doSomeAsyncJob
+};
