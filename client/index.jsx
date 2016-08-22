@@ -1,19 +1,11 @@
 ﻿import React from "react";
 import ReactDOM from "react-dom";
 import { Provider } from "react-redux";
-import promiseMiddleware from "redux-promise";
-import { createStore, applyMiddleware, compose } from "redux";
 
 import App from "./components/App";
-import reducers from "./reducers";
+import configureStore from "./store/configureStore";
 
-const store = createStore(
-    reducers,
-    compose(
-        applyMiddleware(promiseMiddleware), // Apply redux-promise as a middleware.
-        window.devToolsExtension ? window.devToolsExtension() : (f) => f // Add support for redux-devtools.
-    )
-);
+const store = configureStore();
 
 ReactDOM.render(
     <Provider store={store}>
