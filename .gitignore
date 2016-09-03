@@ -8,7 +8,8 @@
 *.suo
 *.tmp
 *.user
- 
+
+/.vscode/
 /.vs/
 /db/
 /node_modules/
