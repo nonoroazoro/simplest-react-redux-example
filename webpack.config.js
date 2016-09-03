@@ -1,8 +1,7 @@
 ﻿const webpack = require("webpack");
 const config = require("./webpack.base.config");
 
-config.module.preLoaders =
-[
+config.module.preLoaders = [
     {
         test: /\.jsx?$/,
         exclude: /node_modules/,
@@ -11,8 +10,7 @@ config.module.preLoaders =
 ];
 
 config.plugins.push(
-    new webpack.SourceMapDevToolPlugin(
-    {
+    new webpack.SourceMapDevToolPlugin({
         filename: "[file].map",
         exclude: ["vendor.js"],
         columns: false,

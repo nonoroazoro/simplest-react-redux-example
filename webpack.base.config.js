@@ -17,14 +17,14 @@ module.exports = {
             "react-redux",
             "redux-promise"
         ],
-        index: ["./index"],
+        index: ["./index"]
     },
     output:
     {
         path: buildPath,
         publicPath: "/assets/",
         filename: "[name].js",
-        chunkFilename: "[id].js",
+        chunkFilename: "[id].js"
     },
     resolve:
     {
@@ -36,7 +36,7 @@ module.exports = {
             {
                 test: /\.jsx?$/,
                 exclude: /node_modules/,
-                loaders: [ "babel" ]
+                loaders: ["babel"]
             },
             {
                 test: /\.css$/,
