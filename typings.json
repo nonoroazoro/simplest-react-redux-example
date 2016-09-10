@@ -1,0 +1,19 @@
+{
+  "globalDevDependencies": {
+    "babel-core": "registry:dt/babel-core#6.7.0+20160423062108",
+    "gulp": "registry:dt/gulp#3.8.0+20160907112908",
+    "gulp-task-listing": "registry:dt/gulp-task-listing#0.0.0+20160316155526",
+    "gulp-util": "registry:dt/gulp-util#0.0.0+20160316155526",
+    "less": "registry:dt/less#0.0.0+20160608105036",
+    "react": "registry:dt/react#0.14.0+20160829191040",
+    "react-dom": "registry:dt/react-dom#0.14.0+20160412154040",
+    "react-redux": "registry:dt/react-redux#4.4.0+20160908183346",
+    "redux": "registry:dt/redux#3.5.2+20160703092728",
+    "redux-promise": "registry:dt/redux-promise#0.5.3+20160703120921",
+    "webpack": "registry:dt/webpack#1.12.9+20160724112410",
+    "webpack-dev-server": "registry:dt/webpack-dev-server#1.12.1+20160909133903"
+  },
+  "globalDependencies": {
+    "node": "registry:dt/node#6.0.0+20160909174046"
+  }
+}
