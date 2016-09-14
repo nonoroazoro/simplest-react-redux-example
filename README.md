@@ -7,6 +7,7 @@ A very simple [Redux](https://github.com/rackt/redux) + [React](https://facebook
 
 - [React](https://facebook.github.io/react/)
 - [Redux](https://github.com/rackt/redux)
+- [redux-actions](https://github.com/acdlite/redux-actions)
 - [Redux Devtools](https://github.com/gaearon/redux-devtools) *(optional)*
 - [ES6](https://babeljs.io/docs/learn-es2015/) ([ES7](http://babeljs.io/docs/plugins/preset-stage-1/))
 - [ESLint](http://eslint.org/)
