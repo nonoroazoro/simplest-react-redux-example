@@ -15,7 +15,8 @@ module.exports = {
             "react-dom",
             "redux",
             "react-redux",
-            "redux-promise"
+            "redux-promise",
+            "redux-actions"
         ],
         index: ["./index"]
     },

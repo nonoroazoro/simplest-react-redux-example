@@ -9,7 +9,8 @@
     "react-dom": "registry:dt/react-dom#0.14.0+20160412154040",
     "react-redux": "registry:dt/react-redux#4.4.0+20160908183346",
     "redux": "registry:dt/redux#3.5.2+20160703092728",
-    "redux-promise": "registry:dt/redux-promise#0.5.3+20160703120921",
+    "redux-actions": "registry:dt/redux-actions#0.8.0+20160521154116",
+    "redux-promise": "registry:dt/redux-promise#0.5.3+20160914125120",
     "webpack": "registry:dt/webpack#1.12.9+20160724112410",
     "webpack-dev-server": "registry:dt/webpack-dev-server#1.12.1+20160909133903"
   },
