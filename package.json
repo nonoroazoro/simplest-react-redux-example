@@ -1,14 +1,13 @@
 {
   "name": "simplest-react-redux-example",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A very simple redux + react + eslint + webpack + gulp + es6 (es7) example for beginners.",
   "author": {
     "name": "nonoroazoro",
     "email": "xiaochao.k@gmail.com"
   },
   "scripts": {
-    "start": "gulp",
-    "build": "gulp build"
+    "start": "gulp"
   },
   "dependencies": {},
   "devDependencies": {
