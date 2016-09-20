@@ -6,9 +6,10 @@ import React, { PropTypes } from "react";
 
 const Counter = (p_props) =>
 {
+    const style = { width: "500px", margin: "0 auto" };
     const { value, actions: { increase, decrease, increaseAsync, decreaseAsync } } = p_props;
     return (
-        <p>
+        <p style={style}>
             <span>{value}</span>
             {" "}
             <button onClick={() => increase()}>+</button>
