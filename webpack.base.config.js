@@ -3,29 +3,22 @@ const webpack = require("webpack");
 const CleanWebpackPlugin = require("clean-webpack-plugin");
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 
-const mainPath = path.resolve(__dirname, "./client/");
-const buildPath = path.resolve(__dirname, "./public/assets/");
+const srcPath = path.resolve(__dirname, "./client/");
+const distPath = path.resolve(__dirname, "./public/assets/");
 
 module.exports = {
-    context: mainPath,
+    context: srcPath,
     entry:
     {
-        vendor: [
-            "react",
-            "react-dom",
-            "redux",
-            "react-redux",
-            "redux-promise",
-            "redux-actions"
-        ],
+        vendor: ["./common/vendor"],
         index: ["./index"]
     },
     output:
     {
-        path: buildPath,
+        path: distPath,
         publicPath: "/assets/",
         filename: "[name].js",
-        chunkFilename: "[id].js"
+        chunkFilename: "[id].chunk.js"
     },
     resolve:
     {
@@ -46,37 +39,26 @@ module.exports = {
             },
             {
                 test: /\.less$/,
-                exclude: /node_modules/,
                 loader: ExtractTextPlugin.extract("style", "css!less")
             },
             {
                 test: /\.(png|jpg)$/,
                 exclude: /node_modules/,
-                loader: "url?limit=10240"
+                loader: "url?limit=10000&name=res/[name].[ext]"
             },
             {
                 test: /\.woff(2)?(\?v=[0-9]\.[0-9]\.[0-9])?$/,
-                exclude: /node_modules/,
-                loader: "url?limit=100000&mimetype=application/font-woff"
+                loader: "url?limit=10000&mimetype=application/font-woff&name=res/[name].[ext]"
             },
             {
                 test: /\.(ttf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
-                exclude: /node_modules/,
-                loader: "file"
+                loader: "file?limit=10000&name=res/[name].[ext]"
             }
         ]
     },
     plugins: [
-        new CleanWebpackPlugin([buildPath]),
-        new webpack.optimize.CommonsChunkPlugin(
-            {
-                name: "vendor",
-                filename: "vendor.js",
-                minChunks: Infinity
-            }
-        ),
+        new CleanWebpackPlugin([distPath]),
         new webpack.optimize.DedupePlugin(),
-        new ExtractTextPlugin("res/[name].css"),
         new webpack.optimize.OccurenceOrderPlugin()
     ]
 };

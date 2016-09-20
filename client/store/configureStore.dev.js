@@ -4,6 +4,7 @@
 
 import promiseMiddleware from "redux-promise";
 import { createStore, applyMiddleware, compose } from "redux";
+import reduxImmutableStateInvariant from "redux-immutable-state-invariant";
 
 import reducers from "../reducers";
 
@@ -13,7 +14,10 @@ export default function configureStore(p_initialState)
         reducers,
         p_initialState,
         compose(
-            applyMiddleware(promiseMiddleware), // Apply redux-promise as a middleware.
+            applyMiddleware(
+                reduxImmutableStateInvariant(),
+                promiseMiddleware
+            ),
             window.devToolsExtension ? window.devToolsExtension() : (f) => f // Add support for redux-devtools.
         )
     );

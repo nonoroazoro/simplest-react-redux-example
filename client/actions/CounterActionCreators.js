@@ -27,7 +27,7 @@ const increaseAsync = createAction("COUNTER_INCREASE_ASYNC", AsyncAPI.doSomeAsyn
 const decreaseAsync = createAction("COUNTER_DECREASE_ASYNC", AsyncAPI.doSomeAsyncJob);
 
 export default {
-    increase: increase,
+    increase,
     decrease,
     increaseAsync,
     decreaseAsync

@@ -10,7 +10,7 @@ gulp.task("dev", () =>
 {
     const port = "8080";
     const address = "http://localhost";
-    const devConfig = require("./webpack.config");
+    const devConfig = require("./webpack.dev.config");
 
     // 1. Hot module replacement of webpack-dev-server.
     devConfig.entry.index.unshift(`webpack-dev-server/client?${address}:${port}`, "webpack/hot/dev-server");

@@ -2,6 +2,7 @@
 *.sublime-project
 *.sublime-workspace
 .vs
+.vscode
 typings
 
 # Compiled source
