@@ -1,6 +1,7 @@
-﻿const webpack = require("webpack");
-const config = require("./webpack.base.config");
+﻿const config = require("./webpack.base.config");
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
+
+config.devtool = "cheap-module-eval-source-map";
 
 config.module.preLoaders = [
     {
@@ -10,17 +11,6 @@ config.module.preLoaders = [
     }
 ];
 
-config.plugins.push(
-    new ExtractTextPlugin("res/[name].css"),
-    new webpack.optimize.CommonsChunkPlugin({
-        name: "vendor",
-        filename: "vendor.js",
-        minChunks: Infinity
-    }),
-    new webpack.SourceMapDevToolPlugin({
-        filename: "[file].map",
-        exclude: ["vendor.js"]
-    })
-);
+config.plugins.push(new ExtractTextPlugin("res/[name].css"));
 
 module.exports = config;
