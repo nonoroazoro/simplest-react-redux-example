@@ -1,6 +1,5 @@
 ﻿const path = require("path");
 const webpack = require("webpack");
-const CleanWebpackPlugin = require("clean-webpack-plugin");
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 const srcPath = path.resolve(__dirname, "./client/");
@@ -57,7 +56,10 @@ module.exports = {
         ]
     },
     plugins: [
-        new CleanWebpackPlugin([distPath]),
+        new webpack.optimize.CommonsChunkPlugin({
+            name: "vendor",
+            minChunks: Infinity
+        }),
         new webpack.optimize.DedupePlugin(),
         new webpack.optimize.OccurenceOrderPlugin()
     ]
