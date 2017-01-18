@@ -5,9 +5,9 @@
 /**
  * Do some async job and return the result.
  */
-async function doSomeAsyncJob(p_num = 1)
+function doSomeAsyncJob(p_num = 1)
 {
-    return await new Promise((resolve, reject) =>
+    return new Promise((resolve, reject) =>
     {
         setTimeout(resolve, 1000);
     }).then(() =>
