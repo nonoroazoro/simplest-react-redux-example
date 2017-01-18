@@ -1,9 +1,5 @@
 ﻿# Editor files
-*.sublime-project
-*.sublime-workspace
-.vs
 .vscode
-typings
 
 # Compiled source
 *.dat
@@ -25,9 +21,8 @@ Icon?
 ehthumbs.db
 Thumbs.db
 
-# Node
+# Node files
 node_modules
 
 # Project specific stuff
-db
-.sessions
+public/assets
