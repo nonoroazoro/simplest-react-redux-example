@@ -8,7 +8,7 @@ gulp.task("h", gTaskListing.withFilters(null, "h|help|default"));
 
 gulp.task("dev", () =>
 {
-    const port = "8080";
+    const port = "8888";
     const address = "http://localhost";
     const devConfig = require("./webpack.dev.config");
 
