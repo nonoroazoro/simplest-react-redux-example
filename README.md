@@ -3,7 +3,7 @@
 A very simple [Redux](https://github.com/rackt/redux) + [React](https://facebook.github.io/react/) example for beginners (support Hot Module Replacement, including Redux reducers :v:).
 
 
-## Features:
+## Features
 
 - [React](https://facebook.github.io/react/)
 - [Redux](https://github.com/rackt/redux)
@@ -17,11 +17,11 @@ A very simple [Redux](https://github.com/rackt/redux) + [React](https://facebook
 - [gulp](http://gulpjs.com/)
 
 
-## Usage:
+## Usage
 
 1. [Download](https://github.com/nonoroazoro/simplest-react-redux-example/archive/master.zip) or `git clone https://github.com/nonoroazoro/simplest-react-redux-example.git`
-2. From the folder `simplest-react-redux-example` run:
+1. From the folder `simplest-react-redux-example` run:
       1. `npm i`
-      2. *(optional) If you wanna [redux-devtools](https://github.com/gaearon/redux-devtools), just install [redux-devtools-extension](https://github.com/zalmoxisus/redux-devtools-extension).*
-      3. `npm start`
-3. Open [http://localhost:8080/](http://localhost:8080/) in the browser.
+      1. *(optional) If you wanna [redux-devtools](https://github.com/gaearon/redux-devtools), just install [redux-devtools-extension](https://github.com/zalmoxisus/redux-devtools-extension).*
+      1. `npm start`
+1. Open [http://localhost:8888/](http://localhost:8888/) in the browser.
