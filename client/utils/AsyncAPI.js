@@ -1,23 +1,22 @@
 /**
- * Just an example of async api.
+ * An example of async api.
  */
 
 /**
- * Do some async job and return the result.
+ * Do some async job then return the result.
  */
-function doSomeAsyncJob(p_num = 1)
+export function doSomeAsyncJob(p_num = 1)
 {
     return new Promise((resolve, reject) =>
     {
         setTimeout(resolve, 1000);
     }).then(() =>
     {
-        // Here's a fake result.
+        // Fake result.
         return p_num;
     });
 }
 
-// Using ES6 export table.
 export default {
     doSomeAsyncJob
 };

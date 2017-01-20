@@ -2,29 +2,29 @@
  * Actions Creators.
  */
 
-import { createAction }  from "redux-actions";
+import { createAction } from "redux-actions";
 
-import AsyncAPI from "../utils/AsyncAPI";
-
-/**
- * Sync Action.
- */
-const increase = createAction("COUNTER_INCREASE", (p_num = 1) => p_num);
+import { doSomeAsyncJob } from "../utils/AsyncAPI";
 
 /**
- * Sync Action.
+ * Sync Action Creator.
  */
-const decrease = createAction("COUNTER_DECREASE", (p_num = 1) => p_num);
+export const increase = createAction("COUNTER_INCREASE", (p_num = 1) => p_num);
 
 /**
- * Async Action.
+ * Sync Action Creator.
  */
-const increaseAsync = createAction("COUNTER_INCREASE_ASYNC", AsyncAPI.doSomeAsyncJob);
+export const decrease = createAction("COUNTER_DECREASE", (p_num = 1) => p_num);
 
 /**
- * Async Action.
+ * Async Action Creator.
  */
-const decreaseAsync = createAction("COUNTER_DECREASE_ASYNC", AsyncAPI.doSomeAsyncJob);
+export const increaseAsync = createAction("COUNTER_INCREASE_ASYNC", doSomeAsyncJob);
+
+/**
+ * Async Action Creator.
+ */
+export const decreaseAsync = createAction("COUNTER_DECREASE_ASYNC", doSomeAsyncJob);
 
 export default {
     increase,
