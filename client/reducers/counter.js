@@ -2,34 +2,24 @@
  * counter is a Reducer of Counter.
  */
 
-import { handleActions } from "redux-actions";
+import { combineActions, handleActions } from "redux-actions";
 
-import CounterActionCreators from "../actions/CounterActionCreators";
+import { increase, increaseAsync, decrease, decreaseAsync } from "../actions/CounterActionCreators";
 
 export default handleActions(
     {
-        [CounterActionCreators.increase]: (state, action) =>
+        [combineActions(increase, increaseAsync)]: (p_state, p_action) =>
         {
             return {
-                value: state.value + action.payload
+                ...p_state,
+                value: p_state.value + p_action.payload
             };
         },
-        [CounterActionCreators.increaseAsync]: (state, action) =>
+        [combineActions(decrease, decreaseAsync)]: (p_state, p_action) =>
         {
             return {
-                value: state.value + action.payload
-            };
-        },
-        [CounterActionCreators.decrease]: (state, action) =>
-        {
-            return {
-                value: state.value - action.payload
-            };
-        },
-        [CounterActionCreators.decreaseAsync]: (state, action) =>
-        {
-            return {
-                value: state.value - action.payload
+                ...p_state,
+                value: p_state.value - p_action.payload
             };
         }
     },
