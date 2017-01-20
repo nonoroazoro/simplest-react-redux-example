@@ -15,9 +15,7 @@ function mapStateToProps(p_state)
 
 function mapDispatchToProps(p_dispatch)
 {
-    return {
-        actions: bindActionCreators(CounterActionCreators, p_dispatch)
-    };
+    return { actions: bindActionCreators(CounterActionCreators, p_dispatch) };
 }
 
 // Connected Component.
