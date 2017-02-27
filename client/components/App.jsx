@@ -5,7 +5,7 @@
 import React from "react";
 import CounterContainer from "../containers/CounterContainer";
 
-const App = (p_props) =>
+const App = () =>
 {
     return (
         <div>
