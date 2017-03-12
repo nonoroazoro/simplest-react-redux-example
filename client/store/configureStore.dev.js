@@ -10,15 +10,18 @@ import reducers from "../reducers";
 
 export default function configureStore(p_initialState)
 {
+    const composeEnhancers = (typeof window === "object" && window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__)
+        ? window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__
+        : compose;
+
     const store = createStore(
         reducers,
         p_initialState,
-        compose(
+        composeEnhancers(
             applyMiddleware(
                 reduxImmutableStateInvariant(),
                 promiseMiddleware
-            ),
-            window.devToolsExtension ? window.devToolsExtension() : (f) => f // Add support for redux-devtools.
+            )
         )
     );
 
