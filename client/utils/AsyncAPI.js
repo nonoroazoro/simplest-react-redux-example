@@ -7,14 +7,9 @@
  */
 export function doSomeAsyncJob(p_num = 1)
 {
-    return new Promise((resolve, reject) =>
-    {
-        setTimeout(resolve, 1000);
-    }).then(() =>
-    {
-        // Fake result.
-        return p_num;
-    });
+    return new Promise(
+        (resolve) => setTimeout(() => resolve(p_num), 1000)
+    );
 }
 
 export default {
