@@ -2,7 +2,8 @@
  * Counter is a Presentational Component.
  */
 
-import React, { PropTypes } from "react";
+import PropTypes from "prop-types";
+import React from "react";
 
 const Counter = (p_props) =>
 {
@@ -27,8 +28,7 @@ const Counter = (p_props) =>
     );
 };
 
-Counter.propTypes =
-{
+Counter.propTypes = {
     value: PropTypes.number.isRequired,
     actions: PropTypes.shape({
         increase: PropTypes.func.isRequired,
